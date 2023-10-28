@@ -80,6 +80,9 @@ def list_qr_codes(qr_folder):
 
 def main():
     print("Welcome to the Password + Qr Generator Program!")
+    if not os.path.exists("QR"):
+        os.makedirs("QR")
+
     while True:
         print("\nOptions:")
         print("1. Generate a new password and QR code")
